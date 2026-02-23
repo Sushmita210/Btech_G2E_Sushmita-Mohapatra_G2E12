@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+float principal, roi, time, si, ci;
+
+printf("Enter Principal Amount: ");
+scanf("%f", &principal);
+printf("Enter Rate of Interest (in %): ");
+scanf("%f", &roi);
+printf("Enter Time Period (in years): ");
+scanf("%f", &time);
+
+si = (principal * roi * time) / 100;
+printf("Simple Interest (SI) = %.2f\n", si);
+
+ci = principal * (pow((1 + roi / 100), time)) - principal;
+printf("Compound Interest (CI) = %.2f\n", ci);
+
+return 0;
+
+ 
+}
